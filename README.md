@@ -14,7 +14,7 @@
 
 > Dispositivo básico para medir la conductividad eléctrica de una muestra líquida (simulada con un potenciómetro), mostrando en pantalla LCD 16x2 I2C el voltaje, valor ADC y una estimación simple de la conductividad. Está preparado para incorporar una fórmula profesional que convierta la conductividad a salinidad real (g/L, ppt, etc) cuando se disponga.
 
-Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, química, biología, etc
+Este proyecto fue creado con mucho ❤️ para ayudar en monitoreo de salud, química, biología, etc.
 
 ---
 
