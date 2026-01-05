@@ -1,7 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Proyecto Hugo💚</title>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #e6f4ea;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #333;
+    padding: 32px 16px;
+  }
+
+  .titulo {
+    font-size: 2.2rem;
+    color: #b02a6b;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .card {
+    max-width: 700px;
+    background-color: #fff2f6;
+    border-left: 6px solid #d63384;
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+  .card h1 {
+    margin-top: 0;
+    color: #b02a6b;
+    font-size: 1.8rem;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  ul {
+    margin-top: 12px;
+    padding-left: 22px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .nota {
+    margin-top: 24px;
+    background-color: #e6f7f7;
+    border-left: 6px solid #20c997;
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-style: italic;
+    color: #0f5132;
+  }
+
+  .link-rama {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+
+  .link-rama a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .link-rama a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
 <body>
-<h1>Versión Agosto-Diciembre 2025</h1>
-<p>Contenido en construcción</p>
+
+  <!-- TÍTULO ARRIBA -->
+  <div class="titulo">
+    PROYECTO HUGO💚
+  </div>
+
+  <!-- CARD CENTRO -->
+ <div class="card">
+  <h1>💚 Rama <strong>VersionAgosto2025</strong></h1>
+
+  <p>
+    Esta rama refleja el avance técnico correspondiente a <strong>Agosto 2025</strong>,
+    incorporando una arquitectura más cercana a un instrumento de medición real,
+    con múltiples sensores, compensaciones físicas y mayor flexibilidad de visualización.
+  </p>
+
+  <p><strong>✨ Mejoras incorporadas</strong></p>
+
+  <ul>
+    <li><strong>Soporte dual de pantallas</strong>
+      <ul>
+        <li>OLED SSD1306 (I2C)</li>
+        <li>LCD 16x2 I2C</li>
+        <li>Seleccionables desde el código según el hardware disponible</li>
+      </ul>
+    </li>
+
+    <li><strong>Medición multiparamétrica</strong>
+      <ul>
+        <li>Conductividad eléctrica (sensor analógico / potenciómetro)</li>
+        <li>Temperatura mediante LM35</li>
+        <li>pH mediante módulo analógico o potenciómetro de simulación</li>
+      </ul>
+    </li>
+
+    <li><strong>Cálculo de salinidad estimada (g/L)</strong>
+      <ul>
+        <li>Compensación térmica respecto a 25 °C</li>
+        <li>Factor correctivo por desviación de pH respecto a 7.0</li>
+      </ul>
+    </li>
+
+    <li><strong>Modelos matemáticos configurables</strong>
+      <ul>
+        <li>Lineal</li>
+        <li>Cuadrático</li>
+        <li>Cúbico</li>
+      </ul>
+    </li>
+
+    <li><strong>Visualización extendida</strong>
+      <ul>
+        <li>Conductividad compensada (mS/cm)</li>
+        <li>Salinidad estimada (g/L)</li>
+        <li>Temperatura (°C)</li>
+        <li>pH aproximado</li>
+      </ul>
+    </li>
+
+    <li><strong>Parámetros totalmente calibrables</strong>
+      <ul>
+        <li>Coeficientes de las fórmulas</li>
+        <li>Rango máximo de conductividad</li>
+        <li>Coeficiente térmico</li>
+        <li>Factor de corrección por pH</li>
+      </ul>
+    </li>
+
+    <li><strong>Gestión robusta del botón</strong>
+      <ul>
+        <li>Antirrebote por software</li>
+        <li>Alternancia entre medición y pausa sin lecturas erráticas</li>
+      </ul>
+    </li>
+
+    <li><strong>Salida completa por puerto serie</strong>
+      <ul>
+        <li>ADC crudo</li>
+        <li>Temperatura</li>
+        <li>pH</li>
+        <li>Conductividad compensada</li>
+        <li>Salinidad estimada</li>
+      </ul>
+    </li>
+
+    <li><strong>Simulación y validación</strong>
+      <ul>
+        <li>Probado en Wokwi y Tinkercad</li>
+        <li>Uso de potenciómetros para simular sensores reales</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="nota">
+    💖 Arquitectura estable, extensible y preparada para integrar fórmulas clínicas reales,
+    nuevos sensores y migración a hardware profesional. 💖
+  </div>
+</div>
+  <!-- LINK ABAJO -->
+  <div class="link-rama">
+    Tocá acá para ir a la rama VersionAgosto2025 💚<br>
+    <a href="https://github.com/paupau77/Proyecto-Hugo-Arduino-Dispositivo-mi-Medidor-de-Salinidad-con-Arduino-UNO/tree/VersionAgosto2025">
+      GitHub — Proyecto Hugo 💚
+    </a>
+  </div>
+
 </body>
 </html>
