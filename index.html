@@ -6,46 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <style>
+  :root {
+    --rosa: #ffe3f2;
+    --rosa-strong: #e85d8f;
+    --aqua: #d2f4f5;
+    --aqua-strong: #14b8b6;
+    --turquesa: #0aa3a3;
+    --gris: #465363;
+    --bg: #f7fafc;
+    --borde-rosa: #e85d8f;
+    --borde-aqua: #14b8b6;
+  }
+
   body {
     font-family: "Segoe UI", system-ui, sans-serif;
     margin: 0;
-    background: #ffffff;
-    color: #2c2c2c;
+    background: var(--bg);
+    color: var(--gris);
     line-height: 1.6;
+    min-height: 100vh;
   }
 
   main {
     max-width: 900px;
     margin: auto;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem 0 1rem;
   }
 
   h1, h2 {
-    color: #0aa3a3;
+    color: var(--turquesa);
+    font-weight: 800;
+    letter-spacing: -1px;
   }
 
   h1 {
     font-size: 2.1rem;
     margin-bottom: 0.3rem;
+    text-align: center;
   }
 
   h2 {
     margin-top: 2rem;
-    border-left: 6px solid #e85d8f;
+    border-left: 6px solid var(--borde-rosa);
     padding-left: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7em;
   }
 
-  p {
-    margin: 0.8rem 0;
+  p, ul, li {
+    font-size: 1.06rem;
+    line-height: 1.7;
   }
 
   a {
-    color: #e85d8f;
+    color: var(--rosa-strong);
     text-decoration: none;
     font-weight: 500;
+    transition: color .16s;
   }
 
   a:hover {
+    color: var(--aqua-strong);
     text-decoration: underline;
   }
 
@@ -58,35 +80,51 @@
   }
 
   .box-pink {
-    background: #fdecef;
-    border-left: 6px solid #e85d8f;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
+    background: var(--rosa);
+    border-left: 5px solid var(--borde-rosa);
+    padding: 1.2em 1.2em;
+    margin: 1.6em 0;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px 0 rgba(232, 93, 143, 0.06);
   }
 
-  .box-blue {
-    background: #e7f6f8;
-    border-left: 6px solid #0aa3a3;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
+  .box-blue, .box-aqua {
+    background: var(--aqua);
+    border-left: 5px solid var(--borde-aqua);
+    padding: 1.2em 1.2em;
+    margin: 1.6em 0;
+    border-radius: 14px;
+    color: #165353;
+    box-shadow: 0 2px 12px 0 rgba(20, 184, 182, 0.06);
   }
+
+  .footer {
+    background: var(--aqua-strong);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    margin-top: 2.5em;
+    box-shadow: 0 -2px 18px 0 rgba(20, 184, 182, 0.08);
+  }
+
+  @media (max-width: 680px) {
+    main {
+      padding: 1.2em 0.3em 0 0.3em;
+    }
     .footer {
-      background: #13a3a6;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-family: 'Arial', sans-serif;
-      font-size: 2rem;
-      line-height: 1.4;
-      margin: 0;
-     }
+      font-size: 1rem;
+      padding: 1.5rem 0.5em;
+    }
+  }
 </style>
-
 </head>
 <body>
-
+<main>
 <h1>Proyecto Hugo💚</h1>
 
 <p>
@@ -106,12 +144,11 @@ Incluye visualización en pantalla LCD 16x2 I2C y OLED, múltiples sensores
 a mejoras.
 </p>
 
-<p>
+<div class="box-pink">
 <strong>Este proyecto no constituye un dispositivo médico ni realiza diagnósticos clínicos.</strong>
-</p>
+</div>
 
 <h2>Versiones disponibles</h2>
-
 <ul>
   <li>
     <a href="./main/">📘 Rama main — versión base</a>
@@ -148,9 +185,10 @@ Código fuente:
 GitHub — Proyecto Hugo💚
 </a>
 </p>
-  <footer>
+</main>
+  <div class="footer">
     Hecho con 💚 por Paupau77 — 2026<br>
     <span style="font-size:0.95em">Gracias por visitar Proyecto Hugo💚.</span>
-  </footer>
+  </div>
 </body>
 </html>
