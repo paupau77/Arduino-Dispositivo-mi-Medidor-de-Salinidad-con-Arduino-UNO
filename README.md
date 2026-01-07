@@ -31,47 +31,33 @@ Nombrar este proyecto con su nombre es también una forma de reconocer esa inspi
 
 ## 📋 Índice de mi Proyecto
 
+1. [⚙️ Hardware y Componentes](#️-hardware-y-componentes)  
+   1.1. [🔧 Componentes](#-componentes)  
+   1.2. [🔌 Esquema de conexión](#-esquema-de-conexion)  
+   1.3. [📷 Esquemas & simuladores](#-esquemas--simuladores)  
 
+2. [🧠 Lógica del Sistema](#-logica-del-sistema)  
+   2.1. [🧠 Funcionamiento del sistema](#-funcionamiento-del-sistema)  
+   2.2. [💻 Código Arduino destacado](#-codigo-arduino-destacado)  
+   2.3. [🧠 Funcionamiento del código](#-funcionamiento-del-codigo)  
 
-### **1. ⚙️ Hardware y Componentes**
+3. [📈 Estado y Desarrollo](#-estado-y-desarrollo)  
+   3.1. [🧪 Estado actual](#-estado-actual)  
+   3.2. [🦋 Nueva rama, progreso del mes de Agosto 2025](#-nueva-rama-progreso-del-mes-de-agosto-2025)  
 
-* **1.1. 🔧 Componentes**
-* **1.2. 🔌 Esquema de conexión**
-* **1.3. 📷 Esquemas & simuladores**
+4. [📚 Futuro y Documentación](#-futuro-y-documentacion)  
+   4.1. [🚀 Posibles mejoras futuras](#-posibles-mejoras-futuras)  
+   4.2. [📚 Documentación](#-documentacion)  
 
-
-
-### **2. 🧠 Lógica del Sistema**
-
-* **2.1. 🧠 Funcionamiento del sistema**
-* **2.2. 💻 Código Arduino destacado**
-* **2.3. 🧠 Funcionamiento del código**
-
-
-
-### **3. 📈 Estado y Desarrollo**
-
-* **3.1. 🧪 Estado actual**
-* **3.2. 🦋 Nueva rama, progreso del mes de Agosto 2025**
-
-
-
-### **4. 📚Futuro y Documentación**
-
-* **4.1. 🚀 Posibles mejoras futuras**
-* **4.2. 📚 Documentación**
-
-
-
-### **5. ❤️ Agradecimientos y Licencia**
-
-* **5.1. 💖 Mi proyecto fue hecho desde el corazón**
-* **5.2. ♥️ Agradecimientos**
-* **5.3. 🙌 Créditos**
-* **5.4. 📄 Licencia**
-* **5.5. ✍️ Autora**
+5. [❤️ Agradecimientos y Licencia](#️-agradecimientos-y-licencia)  
+   5.1. [💖 Mi proyecto fue hecho desde el corazón](#-mi-proyecto-fue-hecho-desde-el-corazon)  
+   5.2. [♥️ Agradecimientos](#️-agradecimientos)  
+   5.3. [🙌 Créditos](#-creditos)  
+   5.4. [📄 Licencia](#-licencia)  
+   5.5. [✍️ Autora](#️-autora)
 
 ---
+
 
 ##  🔧 Componentes
 
