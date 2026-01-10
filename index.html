@@ -278,56 +278,48 @@ li {
       transition: none;
     }
 /* ===============================
-   RESPONSIVE NAVBAR – UNIVERSAL
+   RESPONSIVE NAVBAR – UNA SOLA LÍNEA
    =============================== */
 
-/* 💻 Tablets / notebooks chicos */
-@media (max-width: 1023px) {
-  .navbar-links button {
-    font-size: 0.9em;
-    padding: 0.45em 0.7em;
-  }
-}
-
-/* 📱 Mobile */
+/* 📱 Tablets y mobile */
 @media (max-width: 768px) {
   .navbar-content {
-    padding: 0.5em 0.5em;
+    padding: 0.4em 0.4em;
+  }
+
+  .menu-title span {
+    font-size: 1.15em;
   }
 
   .navbar-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.15em;              /* menos espacio entre botones */
   }
 
   .navbar-links button {
-    font-size: 0.85em;
-    padding: 0.4em 0.6em;
+    font-size: 0.78em;
+    padding: 0.32em 0.45em;
+    gap: 0.3em;
   }
 
   .navbar-links svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 
 /* 📱 Mobile chico */
 @media (max-width: 480px) {
-  .menu-title span {
-    font-size: 1.1em;
-  }
-
   .navbar-links button {
-    font-size: 0.78em;
-    padding: 0.35em 0.5em;
+    font-size: 0.72em;
+    padding: 0.28em 0.4em;
   }
 }
 
-/* 📱 Ultra chico */
+/* 📱 Ultra chico (iPhone SE, Android viejos) */
 @media (max-width: 360px) {
-  .navbar-links button {
-    font-size: 0.72em;
-    padding: 0.3em 0.4em;
+  .navbar-links {
+    transform: scale(0.94);   /* 🔥 truco PRO */
+    transform-origin: center;
   }
 }
   </style>
