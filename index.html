@@ -277,6 +277,59 @@ li {
       pointer-events: auto;
       transition: none;
     }
+/* ===============================
+   RESPONSIVE NAVBAR – UNIVERSAL
+   =============================== */
+
+/* 💻 Tablets / notebooks chicos */
+@media (max-width: 1023px) {
+  .navbar-links button {
+    font-size: 0.9em;
+    padding: 0.45em 0.7em;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0.5em 0.5em;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-links button {
+    font-size: 0.85em;
+    padding: 0.4em 0.6em;
+  }
+
+  .navbar-links svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* 📱 Mobile chico */
+@media (max-width: 480px) {
+  .menu-title span {
+    font-size: 1.1em;
+  }
+
+  .navbar-links button {
+    font-size: 0.78em;
+    padding: 0.35em 0.5em;
+  }
+}
+
+/* 📱 Ultra chico */
+@media (max-width: 360px) {
+  .navbar-links button {
+    font-size: 0.72em;
+    padding: 0.3em 0.4em;
+  }
+}
   </style>
 </head>
 <body>
