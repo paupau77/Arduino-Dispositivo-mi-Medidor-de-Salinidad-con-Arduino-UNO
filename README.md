@@ -14,6 +14,17 @@ La web presenta el proyecto de forma clara, visual y accesible, separando la doc
 
 ---
 
+## Dedicatoria💚
+
+Este proyecto está dedicado **en memoria de Hugo Passucci**,  
+una de las dos inspiraciones humanas de este proyecto.
+
+Su figura estuvo presente como referencia de valores que atraviesan todo el desarrollo del dispositivo: el cuidado, la voluntad, la búsqueda de ayudar a los demás y el compromiso con lo humano detrás de lo técnico.
+
+Nombrar este proyecto con su nombre es también una forma de reconocer esa inspiración que me ha dado y de darle continuidad a la huella que dejó.
+
+---
+
 ##  📄 Licencia
 
 Este proyecto fue desarrollado por Paulina Juich y registrado en la DNDA (Argentina) bajo el número de expediente EX-2025-78014687- el 18 de Julio de 2025.
