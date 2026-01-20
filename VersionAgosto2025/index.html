@@ -17,57 +17,73 @@
     --borde-aqua: #14b8b6;
   }
 
+  /* REGLAS PARA EL STICKY FOOTER */
+  html {
+    background-color: var(--bg);
+    height: 100%;
+  }
+
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: var(--bg);
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     color: var(--gris);
-    padding: 32px 8px;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: none;
   }
 
-.circuit-background {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: white;
-  overflow: hidden;
-}
+  .circuit-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: white;
+    overflow: hidden;
+  }
 
-.circuit-svg {
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-}
+  .circuit-svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
 
-.circuit-svg path,
-.circuit-svg circle {
-  fill: white;
-  stroke: #94a3b8; /* slate-400 */
-  stroke-width: 1.5;
-  stroke-linecap: round;
-}
+  .circuit-svg path,
+  .circuit-svg circle {
+    fill: white;
+    stroke: #94a3b8; 
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
 
-.circuit-svg circle {
-  fill: white;
-}
+  .circuit-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(255,255,255,0.5) 60%,
+      white 100%
+    );
+  }
 
-.circuit-gradient {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(255,255,255,0.5) 60%,
-    white 100%
-  );
-}
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-.content {
-  position: relative;
-  z-index: 1;
-}
+  .main-wrapper {
+    flex: 1;
+    padding: 32px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .titulo {
     font-size: 2.2rem;
@@ -76,9 +92,11 @@
     text-align: center;
     font-weight: 800;
     letter-spacing: -1px;
+    width: 100%;
   }
 
   .card {
+    width: 100%;
     max-width: 700px;
     background-color: var(--aqua);
     border-left: 6px solid var(--borde-aqua);
@@ -88,6 +106,7 @@
     margin-bottom: 2em;
     margin-top: 1.5em;
     color: #165353;
+    box-sizing: border-box;
   }
 
   .card h1 {
@@ -136,226 +155,192 @@
     font-weight: 600;
     box-shadow: 0 2px 12px 0 rgba(232, 93, 143, 0.06);
   }
- /* Estilos de Botones (Links) – Rosa Pastel */
-a.btn {
+
+  a.btn {
     display: inline-block;
     background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
     color: #ffffff;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 10px 5px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(244, 114, 182, 0.35);
     transition: all 0.3s ease;
     border: 1px solid #fbcfe8;
-}
+  }
 
-a.btn:hover {
+  a.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(244, 114, 182, 0.45);
     background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
-}
+    text-decoration: none;
+  }
 
-main, header, section, footer {
-  position: relative;
-  z-index: 1;
-}
+  .footer {
+    background: var(--aqua-strong);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    margin-top: auto; 
+    box-shadow: 0 -2px 18px 0 rgba(20, 184, 182, 0.08);
+  }
 
-  .tag {
-      display: inline-block;
-      background: #e8fbe7;
-      color: #42be82;
-      padding: 0.3em 1em;
-      border-radius: 1em;
-      font-size: 0.96em;
-      margin-bottom: 1em;
-      font-weight: 700;
-      letter-spacing: 0.03em;
+  @media (max-width: 680px) {
+    .card {
+      padding: 18px 15px;
     }
-
-    .icon {
-      font-size: 1.2em;
-      vertical-align: middle;
+    .footer {
+      font-size: 1rem;
+      padding: 1.5rem 0.5em;
     }
-     .footer {
-      background: var(--aqua-strong);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      font-size: 1.3rem;
-      line-height: 1.4;
-      border-top-left-radius: 24px;
-      border-top-right-radius: 24px;
-      margin-top: 2.5em;
-      box-shadow: 0 -2px 18px 0 rgba(20, 184, 182, 0.08);
-     }
-    @media (max-width: 680px) {
-      .card {
-        padding: 18px 7px;
-      }
-      .footer {
-        font-size: 1rem;
-        padding: 1.5rem 0.5em;
-      }
+    .titulo {
+      font-size: 1.8rem;
     }
+  }
 </style>
 </head>
 
 <body>
-
-<!-- Fondo electrónico / circuito -->
 <div class="circuit-background">
   <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">
     <defs>
       <pattern id="circuit-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-
-        <!-- Traces -->
         <path d="M20 20 H 60 V 50 H 90" />
         <circle cx="20" cy="20" r="3" />
         <circle cx="90" cy="50" r="3" />
-
         <path d="M180 180 H 140 V 150 H 110" />
         <circle cx="180" cy="180" r="3" />
-
         <path d="M10 190 V 150 L 40 120 H 80" />
         <circle cx="10" cy="190" r="3" />
         <circle cx="80" cy="120" r="3" />
-
         <path d="M190 10 V 50 L 160 80 H 120" />
         <circle cx="190" cy="10" r="3" />
-
         <path d="M100 10 V 30" />
         <circle cx="100" cy="30" r="2" />
-
         <path d="M100 190 V 170" />
         <circle cx="100" cy="170" r="2" />
-
       </pattern>
     </defs>
-
     <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
   </svg>
-
-  <!-- Gradiente suave -->
   <div class="circuit-gradient"></div>
 </div>
 
 <div class="content">
-  <!-- TODO tu contenido actual -->
+  <div class="main-wrapper">
+    <div class="titulo">PROYECTO HUGO💚</div>
 
-  <!-- TÍTULO -->
-  <div class="titulo">
-    PROYECTO HUGO💚
-  </div>
+    <div class="card">
+      <h1>💚 Rama <strong>VersionAgosto2025</strong></h1>
 
-  <!-- CARD CENTRO -->
- <div class="card">
-  <h1>💚 Rama <strong>VersionAgosto2025</strong></h1>
+      <p>
+        Esta rama refleja el avance técnico correspondiente a <strong>Agosto 2025</strong>,
+        incorporando una arquitectura más cercana a un instrumento de medición real,
+        con múltiples sensores, compensaciones físicas y mayor flexibilidad de visualización.
+      </p>
 
-  <p>
-    Esta rama refleja el avance técnico correspondiente a <strong>Agosto 2025</strong>,
-    incorporando una arquitectura más cercana a un instrumento de medición real,
-    con múltiples sensores, compensaciones físicas y mayor flexibilidad de visualización.
-  </p>
+      <p><strong>✨ Mejoras incorporadas</strong></p>
 
-  <p><strong>✨ Mejoras incorporadas</strong></p>
-
-  <ul>
-    <li><strong>Soporte dual de pantallas</strong>
       <ul>
-        <li>OLED SSD1306 (I2C)</li>
-        <li>LCD 16x2 I2C</li>
-        <li>Seleccionables desde el código según el hardware disponible</li>
-      </ul>
-    </li>
+        <li><strong>Soporte dual de pantallas</strong>
+          <ul>
+            <li>OLED SSD1306 (I2C)</li>
+            <li>LCD 16x2 I2C</li>
+            <li>Seleccionables desde el código según el hardware disponible</li>
+          </ul>
+        </li>
 
-    <li><strong>Medición multiparamétrica</strong>
-      <ul>
-        <li>Conductividad eléctrica (sensor analógico / potenciómetro)</li>
-        <li>Temperatura mediante LM35</li>
-        <li>pH mediante módulo analógico o potenciómetro de simulación</li>
-      </ul>
-    </li>
+        <li><strong>Medición multiparamétrica</strong>
+          <ul>
+            <li>Conductividad eléctrica (sensor analógico / potenciómetro)</li>
+            <li>Temperatura mediante LM35</li>
+            <li>pH mediante módulo analógico o potenciómetro de simulación</li>
+          </ul>
+        </li>
 
-    <li><strong>Cálculo de salinidad estimada (g/L)</strong>
-      <ul>
-        <li>Compensación térmica respecto a 25 °C</li>
-        <li>Factor correctivo por desviación de pH respecto a 7.0</li>
-      </ul>
-    </li>
+        <li><strong>Cálculo de salinidad estimada (g/L)</strong>
+          <ul>
+            <li>Compensación térmica respecto a 25 °C</li>
+            <li>Factor correctivo por desviación de pH respecto a 7.0</li>
+          </ul>
+        </li>
 
-    <li><strong>Modelos matemáticos configurables</strong>
-      <ul>
-        <li>Lineal</li>
-        <li>Cuadrático</li>
-        <li>Cúbico</li>
-      </ul>
-    </li>
+        <li><strong>Modelos matemáticos configurables</strong>
+          <ul>
+            <li>Lineal</li>
+            <li>Cuadrático</li>
+            <li>Cúbico</li>
+          </ul>
+        </li>
 
-    <li><strong>Visualización extendida</strong>
-      <ul>
-        <li>Conductividad compensada (mS/cm)</li>
-        <li>Salinidad estimada (g/L)</li>
-        <li>Temperatura (°C)</li>
-        <li>pH aproximado</li>
-      </ul>
-    </li>
+        <li><strong>Visualización extendida</strong>
+          <ul>
+            <li>Conductividad compensada (mS/cm)</li>
+            <li>Salinidad estimada (g/L)</li>
+            <li>Temperatura (°C)</li>
+            <li>pH aproximado</li>
+          </ul>
+        </li>
 
-    <li><strong>Parámetros totalmente calibrables</strong>
-      <ul>
-        <li>Coeficientes de las fórmulas</li>
-        <li>Rango máximo de conductividad</li>
-        <li>Coeficiente térmico</li>
-        <li>Factor de corrección por pH</li>
-      </ul>
-    </li>
+        <li><strong>Parámetros totalmente calibrables</strong>
+          <ul>
+            <li>Coeficientes de las fórmulas</li>
+            <li>Rango máximo de conductividad</li>
+            <li>Coeficiente térmico</li>
+            <li>Factor de corrección por pH</li>
+          </ul>
+        </li>
 
-    <li><strong>Gestión robusta del botón</strong>
-      <ul>
-        <li>Antirrebote por software</li>
-        <li>Alternancia entre medición y pausa sin lecturas erráticas</li>
-      </ul>
-    </li>
+        <li><strong>Gestión robusta del botón</strong>
+          <ul>
+            <li>Antirrebote por software</li>
+            <li>Alternancia entre medición y pausa sin lecturas erráticas</li>
+          </ul>
+        </li>
 
-    <li><strong>Salida completa por puerto serie</strong>
-      <ul>
-        <li>ADC crudo</li>
-        <li>Temperatura</li>
-        <li>pH</li>
-        <li>Conductividad compensada</li>
-        <li>Salinidad estimada</li>
-      </ul>
-    </li>
+        <li><strong>Salida completa por puerto serie</strong>
+          <ul>
+            <li>ADC crudo</li>
+            <li>Temperatura</li>
+            <li>pH</li>
+            <li>Conductividad compensada</li>
+            <li>Salinidad estimada</li>
+          </ul>
+        </li>
 
-    <li><strong>Simulación y validación</strong>
-      <ul>
-        <li>Probado en Wokwi y Tinkercad</li>
-        <li>Uso de potenciómetros para simular sensores reales</li>
+        <li><strong>Simulación y validación</strong>
+          <ul>
+            <li>Probado en Wokwi y Tinkercad</li>
+            <li>Uso de potenciómetros para simular sensores reales</li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
 
-  <div class="nota">
-    💖 Arquitectura estable, extensible y preparada para integrar fórmulas clínicas reales,
-    nuevos sensores y migración a hardware profesional. 💖
-  </div>
-</div>
-  <!-- LINK ABAJO -->
-   <div style="text-align:center; margin-top: 1.5em;">
-  Tocá acá para ir a la rama VersionAgosto2025 💚
-  <a
-    class="btn"
-    href="https://github.com/paupau77/Proyecto-Hugo-Arduino-Dispositivo-mi-Medidor-de-Salinidad-con-Arduino-UNO/tree/VersionAgosto2025"
-  >
-    GitHub — Proyecto Hugo 💚
-  </a>
-</div>
-   <div class="footer">
+      <div class="nota">
+        💖 Arquitectura estable, extensible y preparada para integrar fórmulas clínicas reales,
+        nuevos sensores y migración a hardware profesional. 💖
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 1.5em;">
+      Tocá acá para ir a la rama VersionAgosto2025 💚<br>
+      <a class="btn" href="https://github.com/paupau77/Proyecto-Hugo-Arduino-Dispositivo-mi-Medidor-de-Salinidad-con-Arduino-UNO/tree/VersionAgosto2025">
+        GitHub — Proyecto Hugo 💚
+      </a>
+    </div>
+  </div> 
+
+  <div class="footer">
     Hecho con 💚 por @Paupau77
     <br>
     © 2026 Paulina Juich. Todos los derechos reservados.
+    <br>
     <span style="font-size:0.95em">Gracias por visitar Proyecto Hugo💚.</span>
   </div>
 </div>
