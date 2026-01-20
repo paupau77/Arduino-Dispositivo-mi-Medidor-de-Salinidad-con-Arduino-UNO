@@ -150,6 +150,27 @@ li {
             border-radius: 0 8px 8px 0;
 }
 
+  /* Estilos de Botones (Links) */
+        a.btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #34d399;
+        }
+
+        a.btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+        }
+
 .box-pink {
   background: var(--rosa);
   border-left: 5px solid var(--borde-rosa);
@@ -288,6 +309,11 @@ li {
       pointer-events: auto;
       transition: none;
     }
+  a.btn {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
 /* ===============================
    RESPONSIVE NAVBAR – UNA SOLA LÍNEA
    =============================== */
@@ -414,10 +440,10 @@ li {
     <h2>Versiones disponibles</h2>
     <ul>
       <li>
-        <a href="./main/">📘 Rama main — versión base</a>
+        <a href="./main/" class="btn">📘 Rama main — versión base</a>
       </li>
       <li>
-        <a href="./VersionAgosto2025/">🧪 Rama VersionAgosto2025 — versión experimental avanzada</a>
+        <a href="./VersionAgosto2025/" class="btn">🧪 Rama VersionAgosto2025 — versión experimental avanzada</a>
       </li>
     </ul>
     <h2>Enfoque</h2>
@@ -446,7 +472,7 @@ li {
     <p>
       Proyecto completo:
       <br />
-      <a href="https://github.com/paupau77/Proyecto-Hugo-Arduino-Dispositivo-mi-Medidor-de-Salinidad-con-Arduino-UNO">
+      <a href="https://github.com/paupau77/Proyecto-Hugo-Arduino-Dispositivo-mi-Medidor-de-Salinidad-con-Arduino-UNO" class="btn">
         GitHub — Proyecto Hugo💚
       </a>
     </p>
