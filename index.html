@@ -427,6 +427,57 @@ body {
   100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
 }
 
+/* --- ESTILOS DE LA SOLAPA DE INSTAGRAM --- */
+.open-insta-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.insta-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px; /* Escondida */
+  width: 300px;
+  height: 100%;
+  background: white;
+  z-index: 1001;
+  box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.insta-sidebar.active { right: 0; } /* Se muestra */
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  display: none;
+  z-index: 1000;
+}
+
+.sidebar-overlay.active { display: block; }
+
 
 /* ===============================
    RESPONSIVE NAVBAR – UNA SOLA LÍNEA
@@ -871,6 +922,40 @@ window.onload = () => {
   setInterval(createHeart, 2000);
 };
 </script>
+
+<button class="open-insta-btn" onclick="toggleSidebar()">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+</button>
+
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<div class="insta-sidebar" id="sidebar">
+  <button onclick="toggleSidebar()" style="align-self: flex-end; background: none; border: none; font-size: 20px; cursor: pointer; color: #94a3b8;">✕</button>
+  
+  <div style="text-align: center; margin-top: 20px;">
+    <div style="width: 70px; height: 70px; background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white;">
+      <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </div>
+    <h3 style="margin-bottom: 5px; color: #1e293b;">@proyectohugo</h3>
+    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 25px;">Seguí el día a día de la electrónica y los avances del medidor.</p>
+    
+    <a href="https://www.instagram.com/proyectohugo" target="_blank" style="text-decoration: none;">
+      <button style="width: 100%; background: #1e293b; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer;">Ver Perfil</button>
+    </a>
+  </div>
+</div>
+
+<script>
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+  
+  // Agrega o quita la clase 'active' para mover la solapa
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+</script>
+
 
 </body>
 </html>
