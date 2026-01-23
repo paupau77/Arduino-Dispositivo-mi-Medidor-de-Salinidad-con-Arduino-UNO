@@ -478,6 +478,39 @@ body {
 
 .sidebar-overlay.active { display: block; }
 
+/* Animación de las burbujas de fondo */
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.animate-blob {
+  animation: blob-float 7s infinite alternate;
+}
+
+/* El resplandor de la tarjeta de Instagram */
+.insta-glow-effect {
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(to right, #ec4899, #a855f7, #f97316);
+  border-radius: 1rem;
+  filter: blur(8px);
+  opacity: 0.25;
+  transition: opacity 0.5s;
+}
+
+.insta-card-wrapper:hover .insta-glow-effect {
+  opacity: 0.75;
+}
+
+/* Contenedor principal de la solapa con fondo Slate 50 */
+.insta-sidebar {
+  background-color: #f8fafc !important; /* Slate 50 */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 
 /* ===============================
    RESPONSIVE NAVBAR – UNA SOLA LÍNEA
@@ -930,18 +963,69 @@ window.onload = () => {
 <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
 
 <div class="insta-sidebar" id="sidebar">
-  <button onclick="toggleSidebar()" style="align-self: flex-end; background: none; border: none; font-size: 20px; cursor: pointer; color: #94a3b8;">✕</button>
-  
-  <div style="text-align: center; margin-top: 20px;">
-    <div style="width: 70px; height: 70px; background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white;">
-      <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-    </div>
-    <h3 style="margin-bottom: 5px; color: #1e293b;">@proyectohugo</h3>
-    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 25px;">Seguí el día a día de la electrónica y los avances del medidor.</p>
+  <button onclick="toggleSidebar()" style="position: absolute; top: 20px; right: 20px; z-index: 10; background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b;">✕</button>
+
+  <div class="animate-blob" style="position: absolute; top: -10%; left: -10%; width: 200px; height: 200px; background: #bbf7d0; border-radius: 50%; filter: blur(40px); opacity: 0.3; pointer-events: none;"></div>
+  <div class="animate-blob" style="position: absolute; bottom: 10%; right: -5%; width: 150px; height: 150px; background: #ccfbf1; border-radius: 50%; filter: blur(40px); opacity: 0.3; pointer-events: none; animation-delay: 2s;"></div>
+
+  <div style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 32px;">
     
-    <a href="https://www.instagram.com/proyectohugo" target="_blank" style="text-decoration: none;">
-      <button style="width: 100%; background: #1e293b; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer;">Ver Perfil</button>
-    </a>
+    <div style="margin-top: 40px;">
+      <div style="display: flex; items-center; gap: 12px; margin-bottom: 16px;">
+        <span style="background: #dcfce7; padding: 8px; border-radius: 8px; color: #16a34a; display: flex;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </span>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0;">Proyecto Hugo<span style="color: #22c55e;">💚</span></h2>
+      </div>
+      
+      <p style="color: #475569; line-height: 1.6; font-size: 1.1rem; margin-bottom: 16px;">
+        "A veces el amor también se expresa con circuitos, sensores, pantallas y datos..."
+      </p>
+
+      <div style="display: flex; gap: 16px; font-size: 0.85rem; color: #64748b;">
+        <span style="display: flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M15 2v2M9 2v2M20 15h2M20 9h2M15 20v2M9 20v2M2 15h2M2 9h2"/></svg>
+            Arduino UNO
+        </span>
+        <span style="display: flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Sensores
+        </span>
+      </div>
+    </div>
+
+    <div class="insta-card-wrapper" style="position: relative; width: 100%;">
+      <div class="insta-glow-effect"></div>
+      <div style="position: relative; background: white; border: 1px solid #f1f5f9; padding: 24px; border-radius: 0.75rem; display: flex; flex-direction: column; align-items: center; gap: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+        
+        <div style="background: linear-gradient(to top right, #facc15, #ef4444, #9333ea); padding: 12px; border-radius: 50%; color: white;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </div>
+
+        <div style="text-align: center;">
+          <p style="color: #1e293b; font-weight: 600; font-size: 1.125rem; margin: 0;">Sigue el proceso</p>
+          <p style="color: #64748b; font-size: 0.875rem; margin-top: 4px;">Avances, fotos y actualizaciones</p>
+        </div>
+
+        <a href="https://www.instagram.com/proyectohugo" target="_blank" style="width: 100%; text-decoration: none;">
+          <button style="width: 100%; padding: 12px; background: #0f172a; color: white; border: none; border-radius: 0.5rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: background 0.3s;">
+            <span>@proyectohugo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align: center; border-top: 1px solid #e2e8f0; padding-top: 32px; margin-top: 20px;">
+      <p style="color: #64748b; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; gap: 4px;">
+        Hecho con <span style="color: #22c55e;">💚</span> por <span style="font-weight: 600; color: #334155;">Paulina Juich</span>
+      </p>
+      <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 16px; line-height: 1.4;">
+        <p>Dedicado a la memoria de Hugo Passucci.</p>
+        <p>Inspirado por el amor a Agus Nicolás.</p>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -950,7 +1034,7 @@ function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('overlay');
   
-  // Agrega o quita la clase 'active' para mover la solapa
+  // clase 'active' para mover la solapa
   sidebar.classList.toggle('active');
   overlay.classList.toggle('active');
 }
