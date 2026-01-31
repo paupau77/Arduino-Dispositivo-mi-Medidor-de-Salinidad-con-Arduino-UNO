@@ -1,5 +1,5 @@
 /*
-  Medidor de Potasio Básico con Arduino UNO
+  Medidor experimental de Potasio (K+) con Arduino y LM358
 Dispositivo básico para medir potasio
 Autor: Paulina Juich
   Licencia: 
