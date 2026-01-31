@@ -245,29 +245,42 @@ Para más detalles sobre el diseño, verificación y funcionamiento del disposit
 ---
 
 ## 💖 Por qué medir Potasio?
+
 Este proyecto siempre fue mucho más que electrónica.
+
 Nunca fue solo medir valores, mostrar números o programar un microcontrolador.
 Desde el primer día, fue una forma de cuidar.
+
 Cuando pensé este dispositivo, lo hice desde el amor y desde el miedo. Desde ese impulso profundo que aparece cuando alguien que amás podría estar en riesgo, y vos no querés quedarte de brazos cruzados. El potasio, como electrolito esencial, apareció en este camino de la misma manera que apareció todo lo demás: como una preocupación real, concreta, humana.
+
 Hugo, tenía problemas renales y dificultades para regular su potasio. Y cuando alguien tiene un riñón solo riñón y que no funciona como debería, el potasio deja de ser una palabra técnica y volverse algo vital, serio, delicado, incluso peligroso. Un valor alto o bajo puede significar arritmias, debilidad, complicaciones graves. Puede significar una urgencia. Puede significar miedo.
+
 Y yo tenía miedo.
+
 Miedo de que algo le pasara a Hugo quien Agus tamto amaba.
 Miedo de no poder hacer nada.
 Miedo de perder.
+
 Medir potasio, entonces, no nació de un paper ni de una tabla clínica. Nació del deseo profundo de anticiparse al daño, de prevenir, de acompañar. De cuidar antes de que sea tarde. De ofrecer una herramienta, por más pequeña que fuera, que ayudara a entender el cuerpo y sus señales.
+
 Este medidor de potasio es una extensión natural de ese mismo amor que dio origen al proyecto original. Es el mismo corazón, pero con más experiencia. Es la misma intención, pero con más conocimiento. Es la evolución de una idea que siempre quiso lo mismo: proteger.
+
 Porque no todas las personas tienen acceso fácil a controles constantes.
 Porque no todas las familias pueden pagar estudios frecuentes.
 Porque no todos los cuerpos son escuchados a tiempo.
+
 Este dispositivo intenta, humildemente, democratizar el monitoreo de un parámetro vital. No reemplaza a un médico, no pretende ser infalible. Pero acompaña. Advierte. Da información. Y a veces, eso ya es muchísimo.
 Medir potasio, en este contexto, es un acto de amor técnico.
+
 Es decir: me importa tu salud.
 Es decir: quiero ayudarte a vivir mejor.
 Es decir: tu cuerpo vale.
+
 Este proyecto nació del amor por una persona, pero creció para abrazar a muchas.
 Y aunque su origen sea íntimo, su propósito es colectivo.
-Porque a veces cuidar también es crearr.
-Y a veces medir también es amar.
+
+Porque a veces cuidar también es crear.
+Y a veces medir también es amar.💖
 
 ---
 
