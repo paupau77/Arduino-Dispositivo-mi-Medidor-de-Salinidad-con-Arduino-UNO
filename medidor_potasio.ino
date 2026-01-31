@@ -1,6 +1,6 @@
 /*
   Medidor experimental de Potasio (K+) con Arduino y LM358
-Dispositivo básico para medir potasio
+Dispositivo experimental para medir potasio utilizando un Amplificador Operacional LM358 para el acondicionamiento de señal, siguiendo la lógica de la instrumentación analítica real.
 Autor: Paulina Juich
   Licencia: 
 Este proyecto fue desarrollado por Paulina Juich y registrado en la DNDA (Argentina) bajo el número de expediente EX-2025-78014687- el 18 de Julio de 2025.
