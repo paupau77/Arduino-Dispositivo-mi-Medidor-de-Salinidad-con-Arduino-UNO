@@ -117,7 +117,7 @@ Su figura estuvo presente como referencia de valores que atraviesan todo el desa
 
 ![Esquema de conexión](esquema_conexion.png)
 
-*Figura 1: Diagrama de conexión entre Arduino, sensor de conductividad, pantalla y pulsador.*
+*Figura 1: Diagrama de conexión entre Arduino, Amplificador Operacional LM358, pantalla y pulsador.*
 
 ---
 
