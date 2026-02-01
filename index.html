@@ -287,8 +287,9 @@ a.btn:hover {
 .card svg {
   flex-shrink: 0;
 }
-.section {
-  display: none;
+.section
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .section.active {
   display: block;
@@ -783,7 +784,7 @@ body {
         GitHub — Proyecto Hugo💚
       </a>
     </p>
-<div id="version-potasio" class="hidden" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+<div id="version-potasio" style="display:none;">
 
 <button onclick="activarModoSalinidad()" class="btn">
 ⬅ Volver a Salinidad
