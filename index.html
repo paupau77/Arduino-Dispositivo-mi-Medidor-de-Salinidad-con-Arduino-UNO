@@ -545,6 +545,67 @@ body {
   transform: translateY(-5px);
 }
 
+/* --- ESTILOS DEL MENÚ LATERAL (SOLUCIÓN) --- */
+
+/* El botón flota sobre todo, no ocupa espacio en el flujo */
+.toggle-btn {
+  position: fixed; /* Clave: fijo en la pantalla */
+  top: 15px;
+  left: 15px;
+  background-color: var(--turquesa);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2000; /* Siempre encima de todo */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.toggle-btn:hover {
+  background-color: var(--aqua-strong);
+}
+
+/* El sidebar ahora es fijo y está escondido a la izquierda */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* Escondido por defecto */
+  width: 260px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  padding: 60px 20px 20px 20px; /* Padding top alto para no chocar con el botón X si lo tuvieras */
+  transition: left 0.3s ease; /* Animación suave */
+  z-index: 1500;
+  overflow-y: auto;
+}
+
+/* Cuando tiene la clase 'active', aparece */
+#sidebar.active {
+  left: 0;
+}
+
+/* Fondo oscuro opcional para cuando abres el menú */
+#overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1400; /* Debajo del sidebar, encima del contenido */
+  display: none; /* Oculto por defecto */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
 
 /* ===============================
    RESPONSIVE NAVBAR – UNA SOLA LÍNEA
@@ -594,6 +655,22 @@ body {
   </style>
 </head>
 <body>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">
+    &#9776; </button>
+
+  <div id="sidebar">
+    <h3 style="color: var(--turquesa); margin-top: 0;">Menú</h3>
+    <div class="config-section">
+      </div>
+  </div>
+
+  <div class="main-content">
+      </div>
+
+
 <div id="hearts-container"></div>
 
 <!-- Fondo electrónico / circuito -->
