@@ -679,8 +679,8 @@ body {
   </nav>
 <div class="main-wrapper">
   <!-- INICIO -->
-  <main id="version-salinidad" class="section active" id="section-inicio">
-    <div id="version-salinidad" class="fade-in">
+  <main class="section active" id="section-inicio">
+    <<div id="version-salinidad" style="flex: 1; padding: 40px 20px; max-width: 1100px; margin: 0 auto; width: 100%;"class="fade-in">
 <h1>Proyecto Hugo💚</h1>
     <p>
       Este proyecto es un <strong>medidor de salinidad experimental</strong> basado en Arduino UNO,
@@ -1217,33 +1217,30 @@ function toggleSidebar() {
 }
 </script>
 
+
 <script>
 function activarModoPotasio() {
-  // 1. Ocultar la versión de Salinidad
+  // 1. Buscamos las dos partes de la web
   const salinidad = document.getElementById('version-salinidad');
-  if(salinidad) {
-    salinidad.style.display = 'none';
-  }
-
-  // 2. Mostrar la versión de Potasio
   const potasio = document.getElementById('version-potasio');
-  if(potasio) {
+
+  // 2. Ocultamos una y mostramos la otra
+  if (salinidad) salinidad.style.display = 'none';
+  if (potasio) {
     potasio.classList.remove('hidden');
     potasio.style.display = 'block';
   }
 
-  // 3. Cambiar los colores de Turquesa a Dorado
+  // 3. Cambiamos los colores de tu CSS a DORADO
   document.documentElement.style.setProperty('--turquesa', '#bf953f');
   document.documentElement.style.setProperty('--aqua-strong', '#b38728');
   document.documentElement.style.setProperty('--aqua', '#fcf6ba');
 
-  // 4. Actualizar la fecha de la autora
+  // 4. Cambiamos la fecha de la autora
   const fechas = document.querySelectorAll('.fecha-autora');
-  fechas.forEach(f => {
-    f.innerText = "Septiembre 2025 - 2026";
-  });
+  fechas.forEach(f => f.innerText = "Septiembre 2025 - 2026");
 
-  // 5. Cerrar el menú lateral y subir al inicio
+  // 5. Cerramos el menú lateral y subimos
   toggleSidebar();
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
